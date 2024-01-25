@@ -1,0 +1,1252 @@
+:root{
+  --bg-color:#1b1f25;
+  --bg-second-color:#282c34;
+  --second-white:rgb(190, 190, 190);
+  --second-gray:rgb(100, 100, 100);
+}
+
+body{
+  background-color: var(--bg-color);
+}
+
+#logo{
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 100px;
+}
+
+#chargeImg {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100vh; 
+  z-index: 9999; 
+  opacity: 0.7; 
+}
+ #chargeImg img{
+  animation: rotate 4s linear 0s infinite;
+ }
+
+ @keyframes rotate {
+  0%{transform: rotate(0);}100%{transform: rotate(360deg);}
+ }
+/**************************************/
+/******* LOGIN GENERAL STYLES *********/
+/**************************************/
+.login {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.login .options {
+  display: flex;
+  justify-content: space-between;
+  color: var(--bg-second-color);
+  font-size: 26px;
+
+}
+.login .options  .selected{
+  color: white;
+}
+
+.login .form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 24px;
+  background-color: var(--bg-second-color);
+  border-radius: 0.5em;
+  padding: 1.5em 2em;
+}
+
+.login .form > input{
+  width: 350px;
+  padding: 0.25em 0.75em;
+  font-size: 24px;
+  background-color: var(--bg-second-color);
+  color: white;
+  border: 1px solid var(--second-white);
+  border-radius: 0.25em;
+
+}
+
+/**************************************/
+/*********** LOGIN STYLES *************/
+/**************************************/
+
+.login-content .divBtn button{
+  font-size: 24px;
+  padding: 0.25em 2em;
+  color: white;
+  background-color: #8fe1a2;
+  border: 1px solid #578b64;
+  border-radius: 0.25em;
+}
+#customCheckbox{
+  margin: 0 0.5em 0 0;
+  font-size: 1em;
+  cursor: pointer;  
+}
+
+#customCheckbox input{
+  display: none;
+}
+
+#customCheckbox span{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 1em ;
+  height: 1em;
+  border: 2px solid var(--second-white);
+  border-radius: 0.25em;
+}
+#customCheckbox input:checked ~ span{
+  border: 2px solid #578b64;
+} 
+
+#customCheckbox input:checked ~ span::before {
+  content: ''; 
+  position: absolute;
+  border: 5px solid #578b64; 
+  width: 1em;
+  height: 1em; 
+  top: -80%;
+  left: -35%;
+  transform: rotate(45deg);
+}
+
+
+/**************************************/
+/********** REGISTER STYLES ***********/
+/**************************************/
+
+.register-content .btnsRegister{
+   display:flex;
+   justify-content: flex-end;
+   gap: 0.5em;
+}
+
+.register-content .btnsRegister button{
+  font-size: 24px;
+  padding: 0.25em 1.5em;
+
+}
+
+.register-content .btnsRegister button:nth-child(1){
+  color: white;
+  background-color: #282c34;
+  border: 1px solid white;
+  border-radius: 0.25em;
+}
+
+.register-content .btnsRegister button:nth-child(2){
+  color: white;
+  background-color: #8fe1a2;
+  border: 1px solid #578b64;
+  border-radius: 0.25em;
+}
+
+/**************************************/
+/********* DASHBOARD STYLES ***********/
+/**************************************/
+
+.dashboard > .row{
+  min-height: 100vh;
+}
+
+.dashboard nav{
+
+  padding: 2em 0 2em 3em;
+  background-color: #2bc74f;
+}
+.dashboard header h1{
+  color: white;
+  font-size: 35px;
+  margin-bottom: 1em;
+}
+.dashboard nav ul{
+  padding: 0;
+}
+.dashboard nav li{
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard nav li> span:nth-child(1){
+  order: 1;
+  display: inline-block;
+  width: 100%;
+  height: 14px;
+}
+.dashboard nav li >span:nth-child(2){
+  order: 3;
+  display: inline-block;
+  width: 100%;
+  height: 14px;
+}
+
+.dashboard nav li div{
+  order: 2;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0 0.5em 1.5em;
+  gap:1em;
+}
+.dashboard nav li p{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 0;
+}
+
+.dashboard nav li.active div{
+  font-size: 20px;
+  background-color: white;
+  margin-bottom: 0;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+}
+
+.dashboard nav li.active p{
+  color: #2bc74f;
+}
+
+.dashboard nav li.active > span:nth-child(1){
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+.dashboard nav li.active > span:nth-child(1) >span{
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 14px;
+  top: 0;
+  left:0;
+  background-color: #2bc74f;
+  border-bottom-right-radius: 5em;
+}
+.dashboard nav li.active > span:nth-child(2){
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+.dashboard nav li.active > span:nth-child(2) >span{
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 14px;
+  top: 0;
+  left:0;
+  background-color: #2bc74f;
+  border-top-right-radius: 5em;
+}
+
+/**************************************/
+/*********** SECTION STYLES ***********/
+/**************************************/
+section{
+  background-color: white;
+
+}
+
+/**************************************/
+/******** SECTION HOME STYLES *********/
+/**************************************/
+
+section .home-sections .camposDiv,
+section .home-sections .trabajadoresDiv,
+section .home-sections .maquinasDiv,
+section .home-sections .actividadesDiv {
+  padding: 0;
+}
+section .home-sections .camposDiv > div{
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;    
+}
+
+section .home-sections .camposDiv > div >div{
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    
+    transition: filter 0.75s ease, transform 0.75s ease;
+}
+section .home-sections .camposDiv p{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+section .home-sections .camposDiv:hover  p{
+    opacity: 1;
+}
+section .home-sections .camposDiv:hover > div >div{
+    filter: brightness(0.60);
+    transform: scale(1.3);
+}
+
+section .home-sections .trabajadoresDiv > div{
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;    
+}
+
+section .home-sections .trabajadoresDiv > div>div{
+    background-position: center;
+    background-size: cover;
+    height: 35vh;
+    border-radius: 1em;
+    transition: filter 0.75s ease, transform 0.75s ease;
+}
+section .home-sections .trabajadoresDiv p{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+section .home-sections .trabajadoresDiv:hover  p{
+    opacity: 1;
+}
+section .home-sections .trabajadoresDiv:hover > div >div{
+    filter: brightness(0.60);
+    transform: scale(1.3);
+}
+section .home-sections .maquinasDiv > div{
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;  
+}
+section .home-sections .maquinasDiv > div > div{
+    background-position: center;
+    background-size: cover;
+    height: 35vh;
+    border-radius: 1em;
+    transition: filter 0.75s ease, transform 0.75s ease;
+}
+section .home-sections .maquinasDiv p{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+section .home-sections .maquinasDiv:hover  p{
+    opacity: 1;
+}
+section .home-sections .maquinasDiv:hover > div >div{
+    filter: brightness(0.60);
+    transform: scale(1.3);
+}
+section .home-sections .actividadesDiv > div{
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+section .home-sections .actividadesDiv > div > div{
+    background-position: center;
+    background-size: cover;
+    height: 35vh;
+    border-radius: 1em;
+    transition: filter 0.75s ease, transform 0.75s ease;
+}
+section .home-sections .actividadesDiv p{
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+section .home-sections .actividadesDiv:hover  p{
+    opacity: 1;
+}
+section .home-sections .actividadesDiv:hover > div >div{
+    filter: brightness(0.60);
+    transform: scale(1.3);
+}
+
+/**************************************/
+/**** SECTION TRABAJADORES STYLES *****/
+/**************************************/
+
+section .workers .n-workers{
+  color: #2bc74f;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .workers .n-workers h2{
+  font-weight: bold;
+  font-size: 200px;
+}
+section .workers .n-workers h3{
+  font-size: 40px;
+  margin-bottom: -1em;
+}
+
+section .workers .filters form{
+  display: flex;
+  gap: 1em;
+}
+section .workers .filters form input{
+  max-width: 350px;
+padding: 0.25em 0.75em;
+font-size: 24px;
+color: #282c34;
+border: 1px solid #2bc74f;
+border-radius: 0.25em;
+
+}
+section .workers .filters form button{
+  font-size: 24px;
+  padding: 0.25em 1em;
+  color: white;
+  background-color: #2bc74f;
+  border-radius: 0.25em;
+  border: none;
+}
+
+section .workers .filters .order-results{
+  margin-top: 1em;
+  border-top: 2px solid #2bc74f;
+  padding: 1em; 
+  color: #2bc74f;
+  display: flex;
+  justify-content: space-between;
+}
+
+section .workers .workers-list .new-worker button{
+  width: 100%;
+  border: 2px dashed #2bc74f;
+  border-radius: 1em;
+  background-color: white;
+}
+
+section .workers .workers-list > div > div {
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+}
+section .workers .workers-list .worker > div{
+  width: 100%;
+  padding: 1em;
+  border: 2px solid #2bc74f;
+  border-radius: 1em;
+  background-color: white;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section .workers .workers-list .worker > div p{
+  color: #2bc74f;
+  font-size: 20px;
+}
+
+/**************************************/
+/****** SECTION TRABAJADOR STYLES *****/
+/**************************************/
+section .employe-info-screen .workerhead button{
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+section .employe-info-screen .workerhead h2{
+  font-size: 70px;
+  color: #282c34;
+  font-weight: bold;
+  letter-spacing: -7px;
+}
+section .employe-info-screen .workerhead h3{
+  font-size: 35px;
+  color: rgb(91, 93, 107);
+}
+
+section .employe-info-screen .foto{
+  padding: 2em;
+  border-radius: 0.5em;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+section .employe-info-screen .foto p{
+  margin: 0;
+  color: #2bc74f;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+section .employe-info-screen .info{
+  padding: 1em;
+}
+
+section .employe-info-screen .info .info-header{
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+section .employe-info-screen .info p{
+  color: #5a5e66;
+  font-size: 17px;
+}
+
+section .employe-info-screen ul{
+  list-style: none;
+  border-left: 4px solid #282c34;
+}
+
+section .employe-info-screen .btn-activities{
+  background-color: white;
+  border: 0;
+  display: flex;
+  align-items: baseline;
+  text-align: left;
+  gap: 2em;
+  padding: 1em 0 1em 0;
+}
+
+section .employe-info-screen .worker-activity .btn-activities img{
+  background-color: #2bc74f;
+  padding: 5px;
+  border-radius: 0.25em;
+}
+section .employe-info-screen .worker-activity .btn-activities p{
+  color: gray;
+  margin: 0;
+  margin-top: 0;
+}
+
+section .employe-info-screen .more-activities .btn-activities img{
+  background-color: #282c34;
+  border-radius: 0.25em;
+}
+
+section .employe-info-screen .more-activities .btn-activities p{
+  color: gray;
+  margin: 0;
+}
+
+section .employe-info-screen .row  :nth-child(2) > div{
+  padding-left: 1em;
+  border-left: 3px solid #82858b5e;
+}
+
+/**************************************/
+/***** SECTION ACTIVIDADES STYLES *****/
+/**************************************/
+section .actividades h2{
+  font-size: 70px;
+  letter-spacing: -7px;
+
+}
+section .actividades .btn_addActividad{
+  display:flex; 
+  justify-content: center;
+
+  align-items: center;
+  border: 1px solid #282c34;
+  font-size: 70px;
+  background-color: white;
+  font-weight: 300;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+section .actividades .btn-activities{
+  background-color: white;
+  border: 0;
+  display: flex;
+  align-items: baseline;
+  text-align: left;
+  gap: 2em;
+  padding: 1em 0 1em 0;
+}
+
+section .actividades .activity .btn-activities img{
+  background-color: #2bc74f;
+  padding: 5px;
+  border-radius: 0.25em;
+}
+section .actividades .activity .btn-activities p{
+  margin: 0;
+  margin-top: 0;
+}
+
+section .actividades .more-activities .btn-activities img{
+  background-color: #282c34;
+  border-radius: 0.25em;
+}
+
+section .actividades .more-activities .btn-activities p{
+  color: gray;
+  margin: 0;
+}
+
+section .actividades .row  :nth-child(2) > div{
+  padding-left: 1em;
+  border-left: 3px solid #82858b5e;
+}
+
+section .actividades .worker-activity .title{
+  color: #282c34;
+}
+
+section .actividades .listActividades{
+  border-left: 3px solid #282c34;
+  list-style: none;
+}
+
+/**************************************/
+/********* CALENDARIO STYLES **********/
+/**************************************/
+section .actividades .calendar{
+  text-align: center;
+  font-size: 30px;
+  color: #282c34;
+}
+
+section .actividades .calendar .calendar-content{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+section .actividades .calendar .calendar-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+section .actividades .calendar .calendar-head .calendar-mounth{
+  letter-spacing: -2px;
+  margin-bottom: -0.75em;
+}
+section .actividades .calendar .calendar-head .calendar-year{
+  font-weight: bold;
+  font-size: 70px;
+  color: #2bc74f;
+  letter-spacing: -7px;
+
+}
+section .actividades .calendar .calendar-days{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size:20px;
+}
+
+section .actividades .calendar .square{
+  height: 125px;
+  width: 100%;
+}
+
+section .actividades  .square p{
+  margin: 0;
+}
+
+section .actividades .square.today{
+  color: #2bc74f;
+
+}
+
+/**************************************/
+/****** SECTION ACTIVIDAD STYLES ******/
+/**************************************/
+section .actividad_info .info button{
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 200;
+}
+section .actividad_info .info h2{
+  font-size: 80px;
+  
+}
+section .actividad_info .info .fecha{
+  font-size: 40px;
+}
+section .actividad_info .info p{
+  font-size: 30px;
+}
+section .actividad_info .campo{
+  color: #282c34;
+}
+section .actividad_info .campo > div{
+  display: flex;
+  gap: 2em;
+  justify-content: center;  
+}
+
+section .actividad_info .campo h2{
+  font-size: 50px;
+  margin-bottom: 1em;
+}
+
+section .actividad_info .trabajadores h2{
+  font-size: 50px;
+  margin-bottom: 1em;
+}
+section .actividad_info table{
+  font-size: 20px;
+}
+
+section table tr button{
+  width: 40px;
+  height: 40px;
+  padding: 0.25em;
+  border-radius: 50%;
+  border: 0;
+}
+
+section .actividad_info .maquinaria h2{
+  font-size: 50px;
+  margin-bottom: 1em;
+}
+
+.div_btnBorrar button{
+  position: relative;
+  border: 2px solid red;
+  color: red;
+  font-weight: 300;
+  width: 170px;
+  height: 90px;
+  background-color: white;
+  border-radius: 0.25em;
+  font-size: 50px;
+  padding:0.25em 1.25em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  overflow: hidden;
+  transition:font-weight 0.9s ease;
+}
+.div_btnBorrar button p{
+  position: absolute;
+  z-index: 30;
+  top: 5px;
+  left: 22px;
+  letter-spacing: -4px;
+
+}
+.div_btnBorrar button span{
+  position: absolute;
+  left: -25px;
+  display: inline-block;
+  content: "";
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  width: 200px ;
+  height: 100px;
+  top:110px
+}
+.div_btnBorrar button .span1{
+  z-index: 10;
+  background-color: #ffc0c0;
+}
+.div_btnBorrar button .span2{
+  z-index: 20;
+  background-color: #ff5757;
+}
+.div_btnBorrar button .span3{
+  z-index: 40;
+  background-color: #d70000;
+}
+.div_btnBorrar button .span4{
+  z-index: 50;
+  background-color: white;
+}
+.div_btnBorrar button:hover{
+  border: 4px solid red;
+  font-weight: 400;
+}
+
+.div_btnBorrar button:hover p{
+  animation: btn_text 0.9s;
+
+}
+.div_btnBorrar button:hover .span1{
+  transition: top 1s ease;
+  top:-110px;
+}
+.div_btnBorrar button:hover .span2{
+  transition: top 1s ease 0.08s;
+  top:-110px;
+}
+.div_btnBorrar button:hover .span3{
+  transition: top 1s ease 0.16s;
+  top:-110px;
+}
+.div_btnBorrar button:hover .span4{
+  transition: top 1s ease 0.24s;
+  top:-110px;
+}
+
+@keyframes btn_text {
+  0%{
+      top:5px;
+  }
+  50%{
+      top:5px;
+  }
+  60%{
+      top:80px;
+  }
+  90%{
+      top:10px;
+  }
+  100%{
+      top:5px;
+  }
+}
+
+/**************************************/
+/******* FORM TRABAJADOR STYLES *******/
+/**************************************/
+
+section .form_trabajador > div{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+section .form_trabajador > div button{
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 200;
+}
+section .form_trabajador > div h2{
+  color: #282c34;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: -8px;
+}
+section .form_trabajador .subtext{
+  color: #5a5e66;
+  font-weight: bold;
+  font-size: 28px;
+}
+section .form_trabajador form label{
+  font-weight: 400;
+  font-size: 20px;
+}
+section .form_trabajador form input{
+  font-size: 20px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #282c34;
+  border-radius: 0;
+}
+section .form_trabajador form select{
+  font-size: 20px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #282c34;
+  border-radius: 0;
+}
+section .form_trabajador form > div{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1em;
+}
+section .form_trabajador form > div p{
+  color: #6b6e75;
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: -1px;
+
+}
+section .form_trabajador form > div button{
+  font-size: 30px;
+  border: 2px solid #282c34;
+  border-radius: 1em;
+  background-color: white;
+}
+
+/**************************************/
+/********** FORM CAMPO STYLES *********/
+/**************************************/
+
+section .form_campo > div{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+section .form_campo > div button{
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 200;
+}
+section .form_campo > div h2{
+  color: #282c34;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: -8px;
+}
+section .form_campo .subtext{
+  color: #5a5e66;
+  font-weight: bold;
+  font-size: 28px;
+}
+section .form_campo form label{
+  font-weight: 400;
+  font-size: 20px;
+}
+section .form_campo form input{
+  font-size: 20px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #282c34;
+  border-radius: 0;
+}
+section .form_campo form select{
+  font-size: 20px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #282c34;
+  border-radius: 0;
+}
+section .form_campo form > div{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1em;
+}
+section .form_campo form > div p{
+  color: #6b6e75;
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: -1px;
+
+}
+section .form_campo form > div button{
+  font-size: 30px;
+  border: 2px solid #282c34;
+  border-radius: 1em;
+  background-color: white;
+}
+
+/**************************************/
+/********* FORM MAQUINA STYLES ********/
+/**************************************/
+
+section .form_maquina > div{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+section .form_maquina > div button{
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 200;
+}
+section .form_maquina > div h2{
+  color: #282c34;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: -8px;
+}
+section .form_maquina .subtext{
+  color: #5a5e66;
+  font-weight: bold;
+  font-size: 28px;
+}
+section .form_maquina form label{
+  font-weight: 400;
+  font-size: 20px;
+}
+section .form_maquina form input{
+  font-size: 20px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #282c34;
+  border-radius: 0;
+}
+section .form_maquina form select{
+  font-size: 20px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #282c34;
+  border-radius: 0;
+}
+section .form_maquina form > .btn_div{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1em;
+}
+section .form_maquina form > .btn_div p{
+  color: #6b6e75;
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: -1px;
+
+}
+section .form_maquina form > .btn_div button{
+  font-size: 30px;
+  border: 2px solid #282c34;
+  border-radius: 1em;
+  background-color: white;
+}
+
+/**************************************/
+/******** FORM ACTIVIDAD STYLES *******/
+/**************************************/
+
+.form_actividad > div{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.form_actividad > div button{
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 200;
+}
+.form_actividad > div h2{
+  color: #282c34;
+  font-size: 70px;
+  font-weight: bold;
+  letter-spacing: -7px;
+}
+.form_actividad .subtext{
+  color: #5a5e66;
+  font-weight: bold;
+  font-size: 28px;
+}
+.form_actividad form label{
+  font-weight: 400;
+  font-size: 20px;
+}
+.form_actividad form input{
+  font-size: 20px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #282c34;
+  border-radius: 0;
+}
+.form_actividad form select{
+  font-size: 20px;
+  margin-bottom: 1em;
+  border: 0;
+  border-bottom: 1px solid #282c34;
+  border-radius: 0;
+}
+.form_actividad form > .btn_div{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 1em;
+}
+.form_actividad form > .btn_div p{
+  color: #6b6e75;
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: -1px;
+
+}
+.form_actividad form > .btn_div button{
+  font-size: 30px;
+  border: 2px solid #282c34;
+  border-radius: 1em;
+  background-color: white;
+}
+
+
+/**************************************/
+/****** SECTION MAQUINA STYLES *****/
+/**************************************/
+
+section .maquina-info-screen .maquinahead button{
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+section .maquina-info-screen .maquinahead h2{
+  font-size: 70px;
+  color: #282c34;
+  font-weight: bold;
+  letter-spacing: -7px;
+}
+section .maquina-info-screen .maquinahead h3{
+  font-size: 35px;
+  color: rgb(91, 93, 107);
+}
+
+section .maquina-info-screen .foto{
+  padding: 2em;
+  border-radius: 0.5em;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+section .maquina-info-screen .foto p{
+  margin: 0;
+  color: #2bc74f;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+section .maquina-info-screen .info{
+  padding: 1em;
+}
+
+section .maquina-info-screen .info .info-header{
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+section .maquina-info-screen .info p{
+  color: #5a5e66;
+  font-size: 17px;
+}
+
+section .maquina-info-screen ul{
+  list-style: none;
+  border-left: 4px solid #282c34;
+}
+
+section .maquina-info-screen .btn-activities{
+  background-color: white;
+  border: 0;
+  display: flex;
+  align-items: baseline;
+  text-align: left;
+  gap: 2em;
+  padding: 1em 0 1em 0;
+}
+
+section .maquina-info-screen .maquina-activity .btn-activities img{
+  background-color: #2bc74f;
+  padding: 5px;
+  border-radius: 0.25em;
+}
+section .maquina-info-screen .maquina-activity .btn-activities p{
+  color: gray;
+  margin: 0;
+  margin-top: 0;
+}
+
+section .maquina-info-screen .more-activities .btn-activities img{
+  background-color: #282c34;
+  border-radius: 0.25em;
+}
+
+section .maquina-info-screen .more-activities .btn-activities p{
+  color: gray;
+  margin: 0;
+}
+
+section .maquina-info-screen .row  :nth-child(2) > div{
+  padding-left: 1em;
+  border-left: 3px solid #82858b5e;
+}
+
+/**************************************/
+/****** SECTION CAMPO STYLES *****/
+/**************************************/
+section .campo-info-screen .campohead button{
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+section .campo-info-screen .campohead h2{
+  font-size: 70px;
+  color: #282c34;
+  font-weight: bold;
+  letter-spacing: -7px;
+}
+section .campo-info-screen .campohead h3{
+  font-size: 35px;
+  color: rgb(91, 93, 107);
+}
+
+section .campo-info-screen .foto{
+  padding: 2em;
+  border-radius: 0.5em;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+section .campo-info-screen .foto p{
+  margin: 0;
+  color: #2bc74f;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+section .campo-info-screen .info{
+  padding: 1em;
+}
+
+section .campo-info-screen .info .info-header{
+  font-size: 30px;
+  font-weight: bold;
+  
+}
+section .campo-info-screen .info p{
+  color: #5a5e66;
+  font-size: 17px;
+}
+
+section .campo-info-screen ul{
+  list-style: none;
+  border-left: 4px solid #282c34;
+}
+
+section .campo-info-screen .row  :nth-child(2) > div{
+  padding-left: 1em;
+  border-left: 3px solid #82858b5e;
+}
