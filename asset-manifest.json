@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cuaderno_campo/static/css/main.f105be07.css",
+    "main.js": "/cuaderno_campo/static/js/main.3e83c3d9.js",
+    "static/js/787.0f8d78ff.chunk.js": "/cuaderno_campo/static/js/787.0f8d78ff.chunk.js",
+    "index.html": "/cuaderno_campo/index.html",
+    "main.f105be07.css.map": "/cuaderno_campo/static/css/main.f105be07.css.map",
+    "main.3e83c3d9.js.map": "/cuaderno_campo/static/js/main.3e83c3d9.js.map",
+    "787.0f8d78ff.chunk.js.map": "/cuaderno_campo/static/js/787.0f8d78ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f105be07.css",
+    "static/js/main.3e83c3d9.js"
+  ]
+}
