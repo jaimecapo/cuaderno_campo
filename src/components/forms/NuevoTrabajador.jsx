@@ -20,7 +20,7 @@ export const NuevoTrabajador = ({ setCreation }) => {
       id_usuario: id
     };
     try {
-      await fetch( "http://campo.talkandeat.es/api/añadirTrabajador" , {
+      await fetch( "https://campo.talkandeat.es/api/añadirTrabajador" , {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ export const Maquinaria = () => {
     async function getMaquinas(){
         let newMaquinaria=[];
         const id=localStorage.getItem('user');
-        await fetch('http://campo.talkandeat.es/api/maquinas?id_usuario='+id).then((reponse)=>reponse.json()).then((data)=>{
+        await fetch('https://campo.talkandeat.es/api/maquinas?id_usuario='+id).then((reponse)=>reponse.json()).then((data)=>{
           if(!data.code)  data.forEach((campo) => {
             newMaquinaria.push(campo);
           });
@@ -37,7 +37,7 @@ export const Maquinaria = () => {
         id:maquina.id
       };
       try {
-        await fetch( "http://campo.talkandeat.es/api/borrarMaquina" , {
+        await fetch( "https://campo.talkandeat.es/api/borrarMaquina" , {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

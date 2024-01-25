@@ -49,7 +49,7 @@ export const Maquina = ({maquina, setFocusMaquina, deleteMaquina}) => {
           id:maquina.id
         };
         try {
-          await fetch( "http://campo.talkandeat.es/api/borrarMaquina" , {
+          await fetch( "https://campo.talkandeat.es/api/borrarMaquina" , {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',

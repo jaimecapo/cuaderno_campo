@@ -28,7 +28,7 @@ export const NuevaMaquina = ({setCreation}) => {
       id_usuario: id
     };
     try {
-      await fetch( "http://campo.talkandeat.es/api/añadirMaquina" , {
+      await fetch( "https://campo.talkandeat.es/api/añadirMaquina" , {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

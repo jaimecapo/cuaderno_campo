@@ -25,7 +25,7 @@ export const NuevoCampo = ({ setCreation }) => {
     };
     
     try {
-      await fetch( "http://campo.talkandeat.es/api/añadirCampo" , {
+      await fetch( "https://campo.talkandeat.es/api/añadirCampo" , {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

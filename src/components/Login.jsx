@@ -37,7 +37,7 @@ function LoginForm({ onClick, setLogued }) {
     
     let correct = false;
     await fetch(
-      "http://campo.talkandeat.es/api/verify?correo=" +
+      "https://campo.talkandeat.es/api/verify?correo=" +
         email +
         "&contraseña=" +
         password
@@ -149,7 +149,7 @@ function RegisterForm({ onClick, changeRegister }) {
       },
       body: JSON.stringify(body),
     };
-    await fetch("http://campo.talkandeat.es/api/añadirUsuario", requestOptions)
+    await fetch("https://campo.talkandeat.es/api/añadirUsuario", requestOptions)
       .then((response) => response.json())
       .then((data) => {
         console.log(data.msg);

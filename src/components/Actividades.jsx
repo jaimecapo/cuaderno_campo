@@ -31,7 +31,7 @@ export const Actividades = () => {
     let newVigent = [];
     async function getActivities() {
       const id=localStorage.getItem('user');
-      await fetch("http://campo.talkandeat.es/api/actividades?id_usuario="+id)
+      await fetch("https://campo.talkandeat.es/api/actividades?id_usuario="+id)
         .then((reponse) => reponse.json())
         .then((data) => {
           if(!data.code)  data.forEach((activity) => {

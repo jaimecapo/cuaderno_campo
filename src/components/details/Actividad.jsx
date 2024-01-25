@@ -9,7 +9,7 @@ export const Actividad = ({ activity, setFocusActivity, deleteActividad }) => {
         id:activity.id
       };
       try {
-        await fetch( "http://campo.talkandeat.es/api/borrarActividad" , {
+        await fetch( "https://campo.talkandeat.es/api/borrarActividad" , {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

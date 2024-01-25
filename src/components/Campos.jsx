@@ -11,7 +11,7 @@ export const Campos = () => {
     async function getCampos(){
         let newCampos=[];
         const id=localStorage.getItem('user');
-        await fetch('http://campo.talkandeat.es/api/campos?id_usuario='+id).then((reponse)=>reponse.json()).then((data)=>{
+        await fetch('https://campo.talkandeat.es/api/campos?id_usuario='+id).then((reponse)=>reponse.json()).then((data)=>{
           if(!data.code)  data.forEach((campo) => {
             newCampos.push(campo);
           });
@@ -37,7 +37,7 @@ export const Campos = () => {
         id:campo.id
       };
       try {
-        await fetch( "http://campo.talkandeat.es/api/borrarCampo" , {
+        await fetch( "https://campo.talkandeat.es/api/borrarCampo" , {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

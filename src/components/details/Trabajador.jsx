@@ -49,7 +49,7 @@ export const Trabajador = ({worker , focusWorker ,deleteWorker}) => {
           nif:worker.nif
         };
         try {
-          await fetch( "http://campo.talkandeat.es/api/borrarTrabajador" , {
+          await fetch( "https://campo.talkandeat.es/api/borrarTrabajador" , {
             method: 'DELETE',
             headers: {
               'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ export const Trabajadores = () => {
     async function getWorkers(){
       let newWorkers=[];
       const id=localStorage.getItem('user');
-      await fetch('http://campo.talkandeat.es/api/trabajadores?id_usuario='+id).then((reponse)=>reponse.json()).then((data)=>{
+      await fetch('https://campo.talkandeat.es/api/trabajadores?id_usuario='+id).then((reponse)=>reponse.json()).then((data)=>{
         if(!data.code)  data.forEach((worker) => {
           newWorkers.push({
             name: worker.nombre, 

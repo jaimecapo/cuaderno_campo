@@ -9,7 +9,7 @@ export const Campo = ({ campo, setFocusCampo, deleteCampo }) => {
         id:campo.id
       };
       try {
-        await fetch( "http://campo.talkandeat.es/api/borrarCampo" , {
+        await fetch( "https://campo.talkandeat.es/api/borrarCampo" , {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

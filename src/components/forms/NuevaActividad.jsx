@@ -19,7 +19,7 @@ export const NuevaActividad = ({ setCreation }) => {
     async function getCampos() {
       let newCampos = [];
       const id = localStorage.getItem("user");
-      await fetch("http://campo.talkandeat.es/api/campos?id_usuario=" + id)
+      await fetch("https://campo.talkandeat.es/api/campos?id_usuario=" + id)
         .then((reponse) => reponse.json())
         .then((data) => {
           if (!data.code)
@@ -34,7 +34,7 @@ export const NuevaActividad = ({ setCreation }) => {
 
     async function getMaquinas() {
       let newMaquinaria = [];
-      await fetch("http://campo.talkandeat.es/api/maquinas?id_usuario=" + id)
+      await fetch("https://campo.talkandeat.es/api/maquinas?id_usuario=" + id)
         .then((reponse) => reponse.json())
         .then((data) => {
           if (!data.code)
@@ -51,7 +51,7 @@ export const NuevaActividad = ({ setCreation }) => {
       let newWorkers = [];
       const id = localStorage.getItem("user");
       await fetch(
-        "http://campo.talkandeat.es/api/trabajadores?id_usuario=" + id
+        "https://campo.talkandeat.es/api/trabajadores?id_usuario=" + id
       )
         .then((reponse) => reponse.json())
         .then((data) => {
@@ -80,7 +80,7 @@ export const NuevaActividad = ({ setCreation }) => {
     };
 
     try {
-      await fetch("http://campo.talkandeat.es/api/añadirActividad", {
+      await fetch("https://campo.talkandeat.es/api/añadirActividad", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
